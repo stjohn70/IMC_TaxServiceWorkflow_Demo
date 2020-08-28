@@ -41,7 +41,7 @@ namespace CRM.Workflows
             if (HelperClass.ValidPostalCode(service, postalCode))
             {
                 LogMessage = "Get TaxRate from service and calculate TaxAmount";
-                taxRate = HelperClass.GetServiceTaxRate(service, postalCode);
+                taxRate = HelperClass.getTaxRate(service, trace, postalCode, "TaxJar");
                 taxAmount = taxRate * taxableAmount;
                 // would normally pull in entire Order entity and run based on header and line item info
             }

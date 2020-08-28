@@ -39,7 +39,7 @@ namespace CRM.Workflows
             if (HelperClass.ValidPostalCode(service, postalCode))
             {
                 LogMessage = "Get TaxRate from service";
-                taxRate = HelperClass.GetServiceTaxRate(service, postalCode);
+                taxRate = HelperClass.getTaxRate(service, trace, postalCode, "TaxJar");
             } 
             else
             {
